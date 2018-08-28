@@ -31,12 +31,12 @@ case "$no" in
 	    wget --no-check-certificate -qO 'lxde.sh' 'https://raw.githubusercontent.com/lpl2002/ovz_win/master/lxde.sh' && chmod a+x lxde.sh && bash lxde.sh;
 	    bash ovz_win.sh;;
     '2' )
-       	apt-get -y install fuse qemu;
+       	apt-get -y install qemu;
        	bash ovz_win.sh;;
     '3' )
 		wget $Download_Url/DEEPIN-LITEXP-6.2.iso;
 		qemu-img create -f qcow xitong.img 5G;
-		qemu -cdrom DEEPIN-LITEXP-6.2.iso -m 256M -boot d xitong.img;;
+		qemu-i386 -cdrom DEEPIN-LITEXP-6.2.iso -m 256M -boot d xitong.img;;
 	* )
         echo "输入错误"
 esac
