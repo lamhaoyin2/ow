@@ -27,8 +27,10 @@ echo "3.安装DEEPIN-LITEXP-6.2精简XP 默认系统盘5GB 默认内存大小256
 read no
 case "$no" in
     '1' )
+		touch /dev/fuse  #不支持fuse的ovz的必要工作 感谢time4vps
 	    apt-get -y update && apt-get -y install ca-certificates sudo ;
 	    wget --no-check-certificate -qO 'lxde.sh' 'https://raw.githubusercontent.com/lpl2002/ovz_win/master/lxde.sh' && chmod a+x lxde.sh && bash lxde.sh;
+	    tightvncserver :1;
 	    bash ovz_win.sh;;
     '2' )
        	apt-get -y install qemu;
