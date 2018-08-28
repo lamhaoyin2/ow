@@ -11,7 +11,7 @@ echo "|                         OpenVZ Install Windows                        |"
 echo "+-----------------------------------------------------------------------+"
 echo "|                       可乐博客  www.CokeMine.com                       |"
 echo "+-----------------------------------------------------------------------+"
-echo "|                            请依次输入 1.2.3                            |"
+echo "|                            请依次输入 1.2                              |"
 echo "+-----------------------------------------------------------------------+"
 echo "|          若出现错误 请访问https://www.cokemine.com/ovz_win.html         |"
 echo "+-----------------------------------------------------------------------+"
@@ -23,7 +23,6 @@ case "${isUrl}" in
 esac
 echo "1.  安装VNC_LXDE"
 echo "2.  安装Qemu"
-echo "3.下载我提供的DEEPIN-LITEXP-6.2精简XP系统"
 read no
 case "$no" in
     '1' )
@@ -35,8 +34,6 @@ case "$no" in
     '2' )
        	apt-get -y install qemu;
        	bash ovz_win.sh;;
-    '3' )
-		wget $Download_Url/DEEPIN-LITEXP-6.2.iso;
 	* )
         echo "输入错误"
 esac
