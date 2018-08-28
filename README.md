@@ -1,1 +1,1 @@
-# ovz_win
+# 在OpenVZ虚拟化使用Qemu安装Windows
