@@ -30,7 +30,6 @@ case "$no" in
 		touch /dev/fuse  #不支持fuse的ovz的必要工作 感谢time4vps
 	    apt-get -y update && apt-get -y install ca-certificates sudo ;
 	    wget --no-check-certificate -qO 'lxde.sh' 'https://raw.githubusercontent.com/lpl2002/ovz_win/master/lxde.sh' && chmod a+x lxde.sh && bash lxde.sh;
-	    tightvncserver :1;
 	    bash ovz_win.sh;;
     '2' )
        	apt-get -y install qemu;
